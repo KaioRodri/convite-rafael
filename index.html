@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convite Avatar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="convite">
+    <img src="/imagens/Logo_de_Avatar_la_leyenda_de_Aang.png" alt="Avatar Logo" class="logo">
+
+    <h1>O Avatar está convocando você!</h1>
+    <p class="aniversariante">Rafael está dominando os 10 anos!</p>
+    <p class="detalhes">🌊🔥 Venha celebrar com os quatro elementos!</p>
+
+    <p><strong>Data:</strong> 12 de Julho de 2025</p>
+    <p><strong>Hora:</strong> 11h00</p>
+    <p><strong>Local:</strong> Piscina da Gildete</p>
+
+ <form id="formulario">
+  <div class="campo">
+    <span>👤</span>
+    <input type="text" id="nome" placeholder="Seu nome">
+  </div>
+
+  <div class="campo">
+    <span>👥</span>
+    <input type="number" id="quantidade" placeholder="Quantas pessoas vão?">
+  </div>
+
+  <p id="erro" class="erro"></p>
+
+  <button type="submit" class="botao">Confirmar pelo WhatsApp</button>
+</form>
+</form>
+
+  </div>
+
+  <script>
+  document.getElementById("formulario").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const nome = document.getElementById("nome").value.trim();
+    const quantidade = document.getElementById("quantidade").value.trim();
+    const erro = document.getElementById("erro");
+
+    if (nome === "" || quantidade === "") {
+      erro.textContent = "⚠️ Por favor, preencha todos os campos!";
+      return;
+    }
+
+    erro.textContent = "";
+
+    const numero = "5582988908642";
+    const mensagem = `Olá! Me chamo ${nome} e vamos em ${quantidade} pessoa(s) para o aniversário do Rafael! 🎉`;
+    const link = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+
+    window.open(link, "_blank");
+  });
+</script>
+
+
+</body>
+</html>

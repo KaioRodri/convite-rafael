@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(120deg, #0077b6, #00b4d8, #90e0ef, #caf0f8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-size: 400% 400%;
+  animation: gradiente 10s ease infinite;
+}
+
+@keyframes gradiente {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.convite {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  max-width: 450px;
+  text-align: center;
+  border-radius: 25px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.3);
+}
+
+.logo {
+  width: 400px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: #023047;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.aniversariante {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fb8500;
+  margin-bottom: 10px;
+}
+
+.detalhes {
+  font-size: 1.2rem;
+  color: #219ebc;
+  margin-bottom: 20px;
+}
+
+.rsvp {
+  margin-top: 20px;
+  color: #555;
+  font-style: italic;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+input {
+  padding: 10px;
+  border: 2px solid #219ebc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+
+.botao {
+  display: inline-block;
+  margin-top: 15px;
+  background-color: #ffb703;
+  color: #000;
+  padding: 12px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.botao:hover {
+  background-color: #fb8500;
+  color: #fff;
+}
+
+.campo {
+  display: flex;
+  align-items: center;
+  border: 2px solid #219ebc;
+  border-radius: 8px;
+  padding: 8px 12px;
+  background-color: #f0f8ff;
+}
+
+.campo span {
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.campo input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+  flex: 1;
+}
+
+.erro {
+  color: #e63946;
+  font-weight: bold;
+  margin: 8px 0 0;
+}
+/* Animação suave nos inputs */
+.campo {
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.campo:hover {
+  border-color: #fb8500;
+  box-shadow: 0 0 10px rgba(251, 133, 0, 0.3);
+}
+
+/* Quando clica no campo */
+.campo input:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(33, 158, 188, 0.6);
+}
+
+/* Animação nos ícones */
+.campo span {
+  transition: transform 0.3s ease;
+}
+
+.campo:focus-within span {
+  transform: scale(1.2) rotate(-5deg);
+}
