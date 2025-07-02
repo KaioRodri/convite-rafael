@@ -29,7 +29,7 @@ body::before {
 }
 
 .convite {
-  background-color: rgba(255, 255, 255, 0.445);
+  background-color: rgba(255, 255, 255, 0.703);
   padding: 30px 20px;
   width: 90%;
   max-width: 450px;
@@ -40,7 +40,7 @@ body::before {
 }
 
 .logo {
-  width: 400px;
+  width: 320px;
   margin-bottom: 20px;
 }
 
